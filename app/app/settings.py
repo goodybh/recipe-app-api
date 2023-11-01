@@ -19,7 +19,11 @@ SECRET_KEY = 'django-insecure-bqi-pv4i0_tubk4mcct3xj#m+)^4n44m!o5%ig4%ev0boc5uv7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = []
-STATIC_URL = '/static/'
+STATIC_URL = '/static/static/'
+MEDIA_URL = '/static/media/'
+
+MEDIA_ROOT = '/vol/web/media'
+STATIC_ROOT = '/vol/web/static'
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -111,3 +115,8 @@ STATIC_URL = '/static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+SPECTACULAR_SETTINGS = {
+    'COMPONENT_SPLIT_REQUEST': True,
+}
